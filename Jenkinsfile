@@ -12,7 +12,7 @@ node {
     }
     // Deploy to Docker provided tomcat container
     stage('code deploy to docker provided tomcat server'){
-        sh 'sudo docker build -t mmk4mmk/war-test:a.0'
+        sh 'sudo docker build -t mmk4mmk/war-test:a.0 .'
 	sh 'sudo docker run -p 9999:8080 -d mmk4mmk/war-test:a.0'
     }
     
